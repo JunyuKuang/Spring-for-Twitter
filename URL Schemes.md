@@ -10,6 +10,15 @@ The URL can be opened in a older version of Spring, which version may not suppor
 #### spring2
 The URL can be opened only if Spring has been updated to a supported version.
 
+#### Note
+Use app ID as scheme if you have multiple editions of Spring installed.
+
+Spring 3 Beta: com.jonny.drift://
+
+Spring: com.jonny.spring://
+
+Spring mini: com.jonny.spring-lite://
+
 ### Common Parameters
 #### account
 Perform a task with specific account identified by your account name (user screen name). The value of account is case insensitive.

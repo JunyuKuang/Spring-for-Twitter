@@ -10,6 +10,15 @@
 #### spring2
 仅当Spring已更新到支持版本后，才能被打开。
 
+#### 备注
+如果您安装了多个版本的Spring，请使用 App ID 作为 Scheme：
+
+Spring 3 Beta: com.jonny.drift://
+
+Spring: com.jonny.spring://
+
+Spring mini: com.jonny.spring-lite://
+
 ### 通用参数
 #### account
 使用由您的账号名（用户@名称）作为区分的特定账号来执行任务。 account对应的内容无需区分大小写。

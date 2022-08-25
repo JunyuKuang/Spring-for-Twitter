@@ -4,6 +4,7 @@
 ## TL;DR
 Replace a Twitter URL's "https" prefix with "spring" to open the URL in Spring. 
 For example: https://twitter.com/theSpringApp => spring://twitter.com/theSpringApp
+If you need to open the URL in Spring mini, replace the prefix with "spring-mini" (e.g. spring-mini://twitter.com/theSpringApp)
 
 ## Preface
 
@@ -17,7 +18,7 @@ The URL can be opened only if Spring has been updated to a supported version.
 #### Note
 Use app ID as scheme if you have multiple editions of Spring installed.
 
-Spring 3 Beta: com.jonny.drift://
+Spring Beta: com.jonny.drift://
 
 Spring: com.jonny.spring://
 

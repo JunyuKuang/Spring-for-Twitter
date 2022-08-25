@@ -1,6 +1,10 @@
 
 # URL Schemes
 
+## TL;DR
+Replace a Twitter URL's "https" prefix with "spring" to open the URL in Spring. 
+For example: https://twitter.com/theSpringApp => spring://twitter.com/theSpringApp
+
 ## Preface
 
 ### Supported Schemes (URL Prefixes)

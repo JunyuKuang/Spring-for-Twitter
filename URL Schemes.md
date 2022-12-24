@@ -2,18 +2,20 @@
 # URL Schemes
 
 ## TL;DR
-Replace a Twitter URL's "https" prefix with "spring" to open the URL in Spring. 
+Replace a Twitter URL's "https" prefix with "**spring**" to open the URL in Spring.
+
+Replace a Mastodon URL's "https" prefix with "**mona**" to open the URL in Mona. 
+
 For example: https://twitter.com/theSpringApp => spring://twitter.com/theSpringApp
-If you need to open the URL in Spring mini, replace the prefix with "spring-mini" (e.g. spring-mini://twitter.com/theSpringApp)
 
 ## Preface
 
 ### Supported Schemes (URL Prefixes)
 #### spring
-The URL can be opened in a older version of Spring, which version may not support these URL Schemes.
+Open one of these apps: Spring, Spring mini (version 4.3+), or Spring Beta.
 
-#### spring2
-The URL can be opened only if Spring has been updated to a supported version.
+#### mona
+Open one of these apps: Mona, or Mona Beta.
 
 #### Note
 Use app ID as scheme if you have multiple editions of Spring installed.
@@ -24,51 +26,53 @@ Spring: com.jonny.spring://
 
 Spring mini: com.jonny.spring-lite://
 
+Mona Beta: com.jonny.monabeta://
+
+Mona: com.jonny.mona://
+
 ### Common Parameters
 #### account
-Perform a task with specific account identified by your account name (user screen name). The value of account is case insensitive.
+Perform a task with specific account identified by your Twitter handle (@username), or Mastodon user address. The value of account is case insensitive.
 
-For example, the account name of @theSpringApp is "theSpringApp".
-
-#### account-id
-Perform a task with specific account identified by the numeric Twitter User ID. 
-
-To get your user ID, first open your user page, then tap the Action button on upper right corner, then tap Copy and select Copy User ID.
-
-Generally, you only need to provide either `account` or `account-id` unless otherwise specified in this document.
-
-"account-id" is preferred over "account" because the ID is a stable value linked to your Twitter account, while the account name can be changed at anytime at Twitter.com, which means if you use "account-id" instead of "account", you don't have to update your URL Scheme configurations after you change your Twitter account name.
+Twitter example: @theSpringApp
+Mastodon example: @MonaApp@mastodon.social
 
 ## Switch Account
-Provide "account" or "account-id" as parameter. Nothing changed if the target account is already activated on the current app window.
+Provide "account" as parameter. Nothing changed if the target account is already activated on the current app window.
 
 #### Examples:
-spring2://switch?account=theSpringApp
+spring://switch?account=@theSpringApp
 
-spring2://switch?account-id=886626176751546368
+mona://switch?account=@MonaApp@mastodon.social
 
 ## Open Tweet Composer
-You can provide 2 optional parameters: text, account/account-id
+You can provide 2 optional parameters: text, account
 
-The value of text parameter will be filled into the tweet composer view. If no account provided, Spring chooses a default account based on the current app window.
+The value of text parameter will be filled into the tweet composer view. If no account provided, Spring/Mona chooses a default account based on the current app window.
 
 #### Examples:
-spring2://post?text=hello
+spring://post?text=hello
 
-spring2://post?text=hello&account-id=886626176751546368
+mona://post?text=hello&account=@MonaApp@mastodon.social
 
 ## Open Search View
-You can provide 2 optional parameters: text, account/account-id
+You can provide 2 optional parameters: text, account
 
 The value of text parameter will be filled into the search bar.
 
 ### Examples:
-spring2://search?text=hello
+spring://search?text=hello
 
-spring2://search?text=hello&account-id=886626176751546368
+mona://search?text=hello&account=@MonaApp@mastodon.social
 
 ## Open Twitter Links
 Currently supports links to tweets (e.g. https://twitter.com/thespringapp/status/1344625888449556480), user pages (e.g. https://twitter.com/thespringapp), and Twitter Lists (e.g. https://twitter.com/i/lists/1344918930687729664)
+
+## Open Mastodon Links
+Supported formats:
+User profile: https://[any_domain]/@[username]. https://mastodon.social/@MonaApp
+
+Toot: https://[any_domain]/@[username]/[toot_id_number] https://mastodon.social/@MonaApp/109506252875971252
 
 ### Basic
 Replace the “https” prefix in a Twitter URL with “spring”.
@@ -80,7 +84,7 @@ spring://twitter.com/theSpringApp
 ### Advanced
 Use the “open” URL scheme if you want to open multiple pages at once, or open a page with specific account.
 
-The URL takes 2 parameters: url (required), and account/account-id (optional).
+The URL takes 2 parameters: url (required), and account (optional).
 
 You may include multiple url parameters. "url" parameters must be percent encoded.
 

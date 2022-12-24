@@ -37,6 +37,34 @@ Perform a task with specific account identified by your Twitter handle (@usernam
 Twitter example: @theSpringApp
 Mastodon example: @MonaApp@mastodon.social
 
+## Open Links in Spring or Mona
+#### Twitter
+Supports links to tweets (e.g. https://twitter.com/thespringapp/status/1344625888449556480), user profiles (e.g. https://twitter.com/thespringapp), Twitter Lists (e.g. https://twitter.com/i/lists/1344918930687729664), Direct Message deep links (e.g. https://twitter.com/messages/123456), and Twitter Search (e.g. https://twitter.com/search?q=hello)
+
+#### Mastodon
+User profile: https://[any_domain]/@[username]. https://mastodon.social/@MonaApp
+
+Toot: https://[any_domain]/@[username]/[toot_id_number] https://mastodon.social/@MonaApp/109506252875971252
+
+### Basic
+Replace the “https” prefix in a Twitter URL with “spring”.
+
+For example, open @theSpringApp’s user page using default account: 
+
+spring://twitter.com/theSpringApp
+
+### Advanced
+Use the “open” URL scheme if you want to open multiple pages at once, or open a page with specific account.
+
+The URL takes 2 parameters: url (required), and account (optional).
+
+You may include multiple url parameters. "url" parameters must be percent encoded.
+
+For example, open user page of @twitter and @jack with a signed in account called @theSpringApp would be something like this: 
+
+spring://open?account=theSpringApp&url=https%3A%2F%2Ftwitter.com%2Ftwitter&url=https%3A%2F%2Ftwitter.com%2Fjack
+
+
 ## Switch Account
 Provide "account" as parameter. Nothing changed if the target account is already activated on the current app window.
 
@@ -64,30 +92,3 @@ The value of text parameter will be filled into the search bar.
 spring://search?text=hello
 
 mona://search?text=hello&account=@MonaApp@mastodon.social
-
-## Open Twitter Links
-Currently supports links to tweets (e.g. https://twitter.com/thespringapp/status/1344625888449556480), user pages (e.g. https://twitter.com/thespringapp), and Twitter Lists (e.g. https://twitter.com/i/lists/1344918930687729664)
-
-## Open Mastodon Links
-Supported formats:
-User profile: https://[any_domain]/@[username]. https://mastodon.social/@MonaApp
-
-Toot: https://[any_domain]/@[username]/[toot_id_number] https://mastodon.social/@MonaApp/109506252875971252
-
-### Basic
-Replace the “https” prefix in a Twitter URL with “spring”.
-
-For example, open @theSpringApp’s user page using default account: 
-
-spring://twitter.com/theSpringApp
-
-### Advanced
-Use the “open” URL scheme if you want to open multiple pages at once, or open a page with specific account.
-
-The URL takes 2 parameters: url (required), and account (optional).
-
-You may include multiple url parameters. "url" parameters must be percent encoded.
-
-For example, open user page of @twitter and @jack with a signed in account called @theSpringApp would be something like this: 
-
-spring://open?account=theSpringApp&url=https%3A%2F%2Ftwitter.com%2Ftwitter&url=https%3A%2F%2Ftwitter.com%2Fjack

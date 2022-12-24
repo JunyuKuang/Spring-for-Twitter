@@ -17,8 +17,8 @@ Open one of these apps: Spring, Spring mini (version 4.3+), or Spring Beta.
 #### mona
 Open one of these apps: Mona, or Mona Beta.
 
-#### Note
-Use app ID as scheme if you have multiple editions of Spring installed.
+##### Note
+You could also use app ID as scheme instead, if you installed multiple editions of Spring or Mona, and you want to explicitly (not randomly) open one of them.
 
 Spring Beta: com.jonny.drift://
 
